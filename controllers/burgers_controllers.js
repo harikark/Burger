@@ -6,7 +6,7 @@ router.get('/', function (req, res) {
 	res.redirect('/burgers');
 });
 
-router.get('/cats', function (req, res) {
+router.get('/burgers', function (req, res) {
 	burger.all(function (data) {
 		var hbsObject = {burgers: data };
 		console.log(hbsObject);
@@ -15,7 +15,7 @@ router.get('/cats', function (req, res) {
 });
 
 router.post('/burgers/create', function (req, res) {
-	burger.create(['name', 'sleepy'], [req.body.name, req.body.sleepy], function () {
+	burger.create(['', ''], [req.body., req.body.], function () {
 		res.redirect('/burgers');
 	});
 });
@@ -25,7 +25,7 @@ router.put('/burgers/update/:id', function (req, res) {
 
 	console.log('condition', condition);
 
-	burger.update({ sleepy: req.body.sleepy }, condition, function () {
+	burger.update({ : req.body. }, condition, function () {
 		res.redirect('/burgers');
 	});
 });
